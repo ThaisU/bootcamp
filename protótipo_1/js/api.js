@@ -17,7 +17,7 @@ const api = axios.create({
     async function listCharactersByPage(page = 1) {
         try {
             const result = await api.get("/character", {
-                params: {page},
+                params: { page },
             });
           
         return {
