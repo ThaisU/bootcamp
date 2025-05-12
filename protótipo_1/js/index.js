@@ -28,7 +28,7 @@ function renderCharactersList(Characters) {
                             <p class="card-text">
                                 <small>
                                     <i id="circle-status" class="bi bi-circle-fill 
-                                    text${
+                                    text-${
                                         mapStatus(character.status).color
                                     }"></i>
                                     <span>${
@@ -65,7 +65,7 @@ function mapStatus(characterStatus) {
     switch(characterStatus) {
         case 'Alive':
             return {
-                color: success,
+                color: "success",
                 text: "Vivo"
             };
         case 'Dead':
