@@ -6,13 +6,14 @@
 
 .main-title {
     color: #105718;
-    animation: tracking-in-expand 0.7s 1s ;
+    animation: tracking-in-expand 0.7s 0s ;
 }
 
 #circle-status {
     font-size: 10px;
     display: inline-block;
     margin-right: 4px;
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 .copy {
@@ -21,16 +22,16 @@
 
 footer {
     background-color: #1f2821;
-    color: #8e8d8d;
+    color: #4c9c4a;
 }
 
 .main-content {
-    background-color: #002003;
+    background-color:#252525;
     background-image: url(../assets/images/FUNDO.jpg);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    padding-bottom: 600px;
+    padding-bottom: 500px;
     padding-top: 40px;
 }
 
@@ -41,6 +42,16 @@ footer {
 .card-text {
     font-size: 20px;
     margin-left: 4px;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    padding-bottom: 250px;
+  }
+
+  .detail {
+    background-size: cover;
+  }
 }
 
 
@@ -54,6 +65,30 @@ footer {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  90% {
+    transform: translateX(-8px);
   }
 }
 
@@ -83,9 +118,10 @@ footer {
 }
 
 .card {
-    background-color: #354338;
+    background-color: transparent;
     color: #ffffff;
     cursor: pointer;
+    --bs-card-border-color: green;
 }
 
 
